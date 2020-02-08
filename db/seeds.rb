@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+saima = User.create(username: "Saima", picture: "https://cdn.kimkim.com/files/a/images/946746941a0f7f28108ea5f937d05c809146f616/big-24d97b441fe4f881740929a692339fdb.jpg", bio: "I love traveling!")
+valentine = User.create(username: "Valentine", picture: "https://cdn.kimkim.com/files/a/images/946746941a0f7f28108ea5f937d05c809146f616/big-24d97b441fe4f881740929a692339fdb.jpg", bio: "I love traveling!")
+
+bucketlist1 = Bucketlist.create(user: valentine)
+
+marrakech = Destination.create(name: "Marrakech", bio: "cool place", photo: "https://cdn.kimkim.com/files/a/images/946746941a0f7f28108ea5f937d05c809146f616/big-24d97b441fe4f881740929a692339fdb.jpg", trip_type: "Adventurous")
+london = Destination.create(name: "London", bio: "cool", photo: "https://cdn.kimkim.com/files/a/images/946746941a0f7f28108ea5f937d05c809146f616/big-24d97b441fe4f881740929a692339fdb.jpg", trip_type: "city")
+
+add_joiner1 = AddJoiner.create(bucketlist: bucketlist1, destination: marrakech)
+add_joiner2 = AddJoiner.create(bucketlist: bucketlist1, destination: london)
+
+review1 = Review.create(user: saima, destination: marrakech, rating: 5, comment: "amazing place!!!!")
+review2 = Review.create(user: valentine, destination: marrakech, rating: 5, comment: "amazing!")
+review3 = Review.create(user: saima, destination: london, rating: 3, comment: "too rainy")
+
+things_to_do1 = ThingsToDo.create(bio: "camel ride", photo: "https://cdn.kimkim.com/files/a/images/946746941a0f7f28108ea5f937d05c809146f616/big-24d97b441fe4f881740929a692339fdb.jpg", destination: marrakech)
+things_to_do2 = ThingsToDo.create(bio: "big ben", photo: "https://cdn.kimkim.com/files/a/images/946746941a0f7f28108ea5f937d05c809146f616/big-24d97b441fe4f881740929a692339fdb.jpg", destination: london)

@@ -1,2 +1,0 @@
-class BuckletlistsController < ApplicationController
-end

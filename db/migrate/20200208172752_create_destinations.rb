@@ -3,7 +3,8 @@ class CreateDestinations < ActiveRecord::Migration[6.0]
     create_table :destinations do |t|
       t.string :name
       t.string :bio
-      t.string :phototrip_type
+      t.string :photo
+      t.string :trip_type
 
       t.timestamps
     end

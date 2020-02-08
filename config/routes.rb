@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :add_joiners
   resources :things_to_dos
-  resources :buckletlists
+  resources :bucketlists
   resources :reviews
   resources :destinations
   resources :users
