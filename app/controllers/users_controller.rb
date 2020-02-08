@@ -12,15 +12,35 @@ class UsersController < ApplicationController
         render json: @user
     end
 
+    ##Register
     def create
        @user = User.create(user_params)
 
         if @user.valid?
-            render json: @user, status: 201
+            token_tag = encode_token({user_id: @user.id})
+            render json: {user: UserSerializer.new(@user), token: token_tag}, status: 201
         else
-            render json: @user.error.full_messages, status: 422
+            render json: {error: "Invalid username or password"}
         end
     end
+
+  # LOGGING IN
+  ## if the user exists in the db, then send them their token
+  def login
+    @user = User.find_by(username: params[:username])
+
+    if @user && @user.authenticate(params[:password])
+      token_tag = encode_token({user_id: @user.id})
+      render json: {user: UserSerializer.new(@user), token: token_tag}
+    else
+      render json: {error: "Invalid username or password"}
+    end
+  end
+
+  def persist
+    token_tag = encode_token({user_id: @user.id})
+    render json: {user: UserSerializer.new(@user), token: token_tag}
+  end
 
     def update
         @user = User.find(params[:id])
