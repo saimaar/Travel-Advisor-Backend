@@ -1,0 +1,2 @@
+class AddJoinersController < ApplicationController
+end
