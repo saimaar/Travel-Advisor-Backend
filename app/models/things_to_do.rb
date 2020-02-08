@@ -1,3 +1,3 @@
 class ThingsToDo < ApplicationRecord
-  belongs_to :destination_id
+  belongs_to :destination
 end
