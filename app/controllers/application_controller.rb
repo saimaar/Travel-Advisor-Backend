@@ -20,7 +20,7 @@ class ApplicationController < ActionController::API
       end
     end
    
-    def current_user
+    def logged_user
       if decoded_token
         # decoded_token=> [{"user_id"=>2}, {"alg"=>"HS256"}]
         # or nil if we can't decode the token
@@ -30,11 +30,11 @@ class ApplicationController < ActionController::API
     end
    
     def logged_in?
-      !!current_user
+      !!logged_user
     end
 
     def authorized
         render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
-      end
+    end
       
   end
