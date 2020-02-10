@@ -9,4 +9,5 @@ class UserSerializer < ActiveModel::Serializer
       add_join.destination
     end
   end
+
 end

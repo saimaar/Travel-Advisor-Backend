@@ -14,14 +14,15 @@ class UsersController < ApplicationController
 
     ##Register
     def create
-       @user = User.create(user_params)
-
-        if @user.valid?
-            token_tag = encode_token({user_id: @user.id})
-            render json: {user: UserSerializer.new(@user), token: token_tag}, status: 201
-        else
-            render json: {error: "Invalid username or password"}
-        end
+      # byebug
+      @user = User.create(user_params)
+      Bucketlist.create(user_id: @user.id)
+       if @user.valid?
+        token_tag = encode_token({user_id: @user.id})
+        render json: {user: UserSerializer.new(@user), token: token_tag}, status: 201
+      else
+        render json: {error: "Invalid username or password"}
+      end
     end
 
   # LOGGING IN
