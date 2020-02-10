@@ -8,8 +8,9 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
-
-        render json: @user
+          token_tag = encode_token({user_id: @user.id})
+        # render json: {user: @user, aye: "aye"}
+          render json: {user: UserSerializer.new(@user), token: token_tag}
     end
 
     ##Register
@@ -31,7 +32,8 @@ class UsersController < ApplicationController
 
     if @user && @user.authenticate(params[:password])
       token_tag = encode_token({user_id: @user.id})
-      render json: {user: UserSerializer.new(@user), token: token_tag}
+      render json: {user: UserSerializer.new(@user), token: token_tag, reiviews: @user.reviews }
+      # render json: @user, include: "**"
     else
       render json: {error: "Invalid username or password"}
     end
