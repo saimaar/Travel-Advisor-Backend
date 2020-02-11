@@ -14,9 +14,10 @@ class UsersController < ApplicationController
 
     ##Register
     def create
-      # byebug
       @user = User.create(user_params)
       Bucketlist.create(user_id: @user.id)
+      # byebug
+
        if @user.valid?
         token_tag = encode_token({user_id: @user.id})
         render json: {user: UserSerializer.new(@user), token: token_tag}, status: 201
@@ -28,8 +29,8 @@ class UsersController < ApplicationController
   # LOGGING IN
   ## if the user exists in the db, then send them their token
   def login
+    # byebug
     @user = User.find_by(username: params[:username])
-
     if @user && @user.authenticate(params[:password])
       token_tag = encode_token({user_id: @user.id})
       render json: {user: UserSerializer.new(@user), token: token_tag}
