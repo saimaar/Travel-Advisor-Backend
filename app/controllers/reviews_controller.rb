@@ -14,8 +14,10 @@ class ReviewsController < ApplicationController
     end
 
     def create
-        @review = Review.create(review_params)
- 
+      # byebug
+        create_review = review_params.merge({user_id: logged_user.id})
+        @review = Review.create(create_review)
+
         render json: @review
         #  if @review.valid?
         #      render json: @review, status: 201
@@ -23,18 +25,18 @@ class ReviewsController < ApplicationController
         #      render json: @review.error.full_messages, status: 422
         #  end
      end
- 
+
      def update
          @review = Review.find(params[:id])
          @review.update(review_params)
- 
+
          render json: @review
      end
- 
+
      def destroy
          @review = Review.find(params[:id])
          @review.destroy
- 
+
          render json: {message: "User has been deleted", user: @review}
      end
 
