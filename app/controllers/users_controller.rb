@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+before_action :authorized, only: [:persist]
+##calling this method before it hit any routesc
+
 
     def index
         @users = User.all
@@ -41,8 +44,11 @@ class UsersController < ApplicationController
   end
 
   def persist
+
     token_tag = encode_token({user_id: @user.id})
+    # byebug
     render json: {user: UserSerializer.new(@user), token: token_tag}
+
   end
 
     def update
