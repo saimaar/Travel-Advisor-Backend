@@ -3,7 +3,8 @@ class BucketlistsController < ApplicationController
     def index
         @bucketlists = Bucketlist.all
 
-        render json: @bucketlists, include: "**"
+        render json: @bucketlists
+        # , include: "**"
     end
 
     def show
@@ -11,5 +12,6 @@ class BucketlistsController < ApplicationController
 
         render json: @bucketlist
     end
+
 
 end
