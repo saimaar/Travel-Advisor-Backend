@@ -25,7 +25,7 @@ dhaka = Destination.create(name:  "Dhaka", bio: "populated city", photo: "https:
 paris = Destination.create(name: "Paris", bio: "cool", photo: "https://blinkvisa.com/blog/wp-content/uploads/2019/09/eiffel-tower-min.jpg", trip_type: "family")
 kualalumpur = Destination.create(name: "kuala lumpur", bio: "cool", photo: "https://cdn.thecrazytourist.com/wp-content/uploads/2018/08/ccimage-shutterstock_571221049.jpg", trip_type: "city")
 bangkok = Destination.create(name: "Bangkok", bio: "cool", photo: "https://253qv1sx4ey389p9wtpp9sj0-wpengine.netdna-ssl.com/wp-content/uploads/2019/01/Bangkok_Thailand_HERO_GettyImages_HERO_1920x1280.jpg", trip_type: "city")
-phuket = Destination.create(name: "Phuket", bio: "cool", photo: "https://rccl-h.assetsadobe.com/is/image/content/dam/royal/data/ports/phuket-thailand/overview/phuket-thailand-boat-sea.jpg", trip_type: "city")
+phuket = Destination.create(name: "Phuket", bio: "cool", photo: "https://lp-cms-production.imgix.net/2019-06/58481926.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4", trip_type: "relax")
 
 
 # add_joiner1 = AddJoiner.create(bucketlist: bucketlist1, destination: marrakech)
@@ -69,4 +69,3 @@ sonargaon = ThingsToDo.create(name: "Sonargaon", bio: "Sonargaon is a historic c
 jatiyaSangsadBhaban = ThingsToDo.create(name: "Jatiya Sangsad Bhaban", bio: "Jatiya Sangsad Bhaban or National Parliament House, is the house of the Parliament of Bangladesh, located at Sher-e-Bangla Nagar in the Bangladeshi capital of Dhaka. Designed while the country was still part of a Pakistan by architect Louis Kahn, the complex is one of the largest legislative complexes in the world, comprising 200 acres.", photo: "https://t1.gstatic.com/images?q=tbn:ANd9GcRNFf7M1W_6qkfY8q4CDm_nBDhexVlj0ZxbizEfHun4oApQXhobh-dP0GDEmvheShngrtB8teozLF72SA", destination: dhaka)
 
 # things to do KUALALUMPUR
-
