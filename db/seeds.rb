@@ -28,16 +28,6 @@ bangkok = Destination.create(name: "Bangkok", bio: "cool", photo: "https://253qv
 phuket = Destination.create(name: "Phuket", bio: "cool", photo: "https://lp-cms-production.imgix.net/2019-06/58481926.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4", trip_type: "relax")
 
 
-# add_joiner1 = AddJoiner.create(bucketlist: bucketlist1, destination: marrakech)
-# add_joiner2 = AddJoiner.create(bucketlist: bucketlist2, destination: london)
-#
-# review1 = Review.create(user: saima, destination: marrakech, rating: 5, comment: "amazing place!!!!")
-# review2 = Review.create(user: valentine, destination: marrakech, rating: 5, comment: "amazing!")
-# review3 = Review.create(user: saima, destination: london, rating: 3, comment: "too rainy")
-
-# things_to_do1 = ThingsToDo.create(bio: "camel ride", photo: "https://cdn.kimkim.com/files/a/images/946746941a0f7f28108ea5f937d05c809146f616/big-24d97b441fe4f881740929a692339fdb.jpg", destination: marrakech)
-# things_to_do2 = ThingsToDo.create(bio: "big ben", photo: "https://cdn.kimkim.com/files/a/images/946746941a0f7f28108ea5f937d05c809146f616/big-24d97b441fe4f881740929a692339fdb.jpg", destination: london)
-
 # things to do in PARIS
 eiffelTower = ThingsToDo.create(name: "Eiffel Tower", bio: "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Constructed from 1887 to 1889 as the entrance to the 1889 World's Fair, it was initially criticised by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognisable structures in the world.", photo: "https://t2.gstatic.com/images?q=tbn:ANd9GcTZqojMuPgBs1hI7sB6dutyGt9oeMf7tX3uDrl58vn_VdTN4wpfIOpCeugZP77x0Ra-mehw3smmmCf0ag", destination: paris)
 louvreMuseum = ThingsToDo.create(name: "Louvre Museum", bio: "The Louvre, or the Louvre Museum, is the world's largest art museum and a historic monument in Paris, France. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement.", photo: "https://lh6.googleusercontent.com/proxy/rTbi-X92elPSsz7EpA_GNfdKf9kdZmGa93oVhGrGFtWjn-_vmhfKgiPbCNgywMF_gbtWB7WDtRuasGKqLbxv7UZ5ujKqGcHLydDC4Yi3hKz9z9IrQVq3NC7LMgVCnksIjCGWSanjggWvlI06GKFn2XoVGFcKwq3V_bgOjSxXiru9=w296-h202-n-k-no", destination: paris)
