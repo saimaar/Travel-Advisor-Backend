@@ -3,4 +3,5 @@ class DestinationSerializer < ActiveModel::Serializer
   has_many :reviews
   has_many :things_to_dos
   has_many :add_joiners
+
 end

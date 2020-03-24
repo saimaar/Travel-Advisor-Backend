@@ -37,7 +37,7 @@ class ReviewsController < ApplicationController
          @review = Review.find(params[:id])
          @review.destroy
 
-         render json: {message: "Review has been deleted", user: @review}
+         render json: {message: "Review has been deleted", review: @review}
      end
 
      private
