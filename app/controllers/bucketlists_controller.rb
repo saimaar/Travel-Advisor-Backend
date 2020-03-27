@@ -8,7 +8,7 @@ class BucketlistsController < ApplicationController
 
     def show
         @bucketlist = Bucketlist.find(params[:id])
-
+        # byebug
         render json: @bucketlist
     end
 

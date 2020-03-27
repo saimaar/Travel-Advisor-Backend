@@ -1,14 +1,14 @@
 class ApplicationController < ActionController::API
- 
+
     def encode_token(payload)
       # don't forget to hide your secret in an environment variable
       JWT.encode(payload, 'my_s3cr3t')
     end
-   
+
     def auth_header
       request.headers['Authorization']
     end
-   
+
     def decoded_token
       if auth_header
         token = auth_header.split(' ')[1]
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::API
         end
       end
     end
-   
+
     def logged_user
       if decoded_token
         # decoded_token=> [{"user_id"=>2}, {"alg"=>"HS256"}]
@@ -28,7 +28,7 @@ class ApplicationController < ActionController::API
         @user = User.find_by(id: user_id)
       end
     end
-   
+
     def logged_in?
       !!logged_user
     end
@@ -36,5 +36,5 @@ class ApplicationController < ActionController::API
     def authorized
         render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
     end
-      
+
   end
