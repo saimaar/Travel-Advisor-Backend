@@ -4,16 +4,9 @@ class UserSerializer < ActiveModel::Serializer
   has_one :bucketlist
 
   def bucketlist
-    self.object.bucketlist.add_joiners.map do |add_join|
-      add_join.destination
+    self.object.bucketlist.add_joiners.map do |add_joiner|
+      add_joiner
     end
-    # byebug
-    # {
-    #   id: self.object.bucketlist.id,
-    #   destinations: self.object.bucketlist.add_joiners.map do |add_join|
-    #       add_join.destination
-    #     end
-    # }
   end
 
 end

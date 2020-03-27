@@ -4,14 +4,12 @@ class BucketlistsController < ApplicationController
         @bucketlists = Bucketlist.all
 
         render json: @bucketlists
-        # , include: "**"
     end
 
     def show
         @bucketlist = Bucketlist.find(params[:id])
-
+        # byebug
         render json: @bucketlist
     end
-
 
 end

@@ -44,35 +44,32 @@ before_action :authorized, only: [:persist]
   end
 
   def persist
-
     token_tag = encode_token({user_id: @user.id})
-    # byebug
     render json: {user: UserSerializer.new(@user), token: token_tag}
-
   end
 
   def profile
     render json: logged_user
   end
 
-    def update
-        @user = User.find(params[:id])
-        @user.update(user_params)
+  def update
+      @user = User.find(params[:id])
+      @user.update(user_params)
 
-        render json: @user
-    end
+      render json: @user
+  end
 
-    def destroy
-        @user = User.find(params[:id])
-        @user.destroy
+  def destroy
+      @user = User.find(params[:id])
+      @user.destroy
 
-        render json: {message: "User has been deleted", user: @user}
-    end
+      render json: {message: "User has been deleted", user: @user}
+  end
 
-    private
+  private
 
-    def user_params
-        params.permit(:username, :picture, :bio, :password)
-    end
+  def user_params
+      params.permit(:username, :picture, :bio, :password)
+  end
 
 end
