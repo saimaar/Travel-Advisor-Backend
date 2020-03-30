@@ -12,9 +12,6 @@ class AddJoinersController < ApplicationController
         render json: add_joiner
     end
 
-    # create_add_joiner look for the logged in user grab its bucketlist and the id of that bucketlist.
-    # merge it to the add_joiner_params as add_joiners has 2 attributes destination_id & bucketlist_id
-    # merge two objects together
     def create
         create_add_joiner = add_joiner_params.merge({bucketlist_id: logged_user.bucketlist.id})
         add_joiner = AddJoiner.create(create_add_joiner)
