@@ -54,3 +54,19 @@ To launch the app you'll have to follow the following steps:
 - Ensure it is running locally on `http://localhost:3000` to view it in the browser
 
 ## Features
+
+Users can sign up or sign in. Upon Sign in users are taken to the home page and gain access to their profile and all other functionalities likes adding to bucketlist, rating a destination and deleting their profile. <br />
+
+![login gif](./src/images/login.gif)<br />
+
+User is able to see a list of destinations, search for a specific destination and click on them to be taken to the it's show page.<br />
+
+![home page gif](./src/images/home-page.gif)<br />
+
+Once on the destination show page the user see more information about the destination and the things to do there. The user can also, add the destination to their bucketlist to save for later. They can also leave a review about and/or delete it<br />
+
+![item show page](./src/images/destination-show-page.gif)<br />
+
+Once the destination is added to the bucketlist the user can see it on their own profile and delete it if wanted. The user can also see their amount of contributions to the website(reviews), the number of destinations in their bucketlist and delete their profile as well.<br />
+
+![profile page](./src/images/profile-page.gif)<br />
