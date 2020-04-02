@@ -19,13 +19,12 @@ before_action :authorized, only: [:persist]
     def create
       @user = User.create(user_params)
       Bucketlist.create(user_id: @user.id)
-      # byebug
 
-       if @user.valid?
+      if @user.valid?
         token_tag = encode_token({user_id: @user.id})
         render json: {user: UserSerializer.new(@user), token: token_tag}, status: 201
       else
-        render json: {error: "Invalid username or password"}
+        render json: {error: "Can't be blank."}
       end
     end
 
@@ -39,7 +38,7 @@ before_action :authorized, only: [:persist]
       render json: {user: UserSerializer.new(@user), token: token_tag}
       # render json: @user, include: "**"
     else
-      render json: {error: "Invalid username or password"}
+      render json: {error: "Invalid username or password. Please try again."}
     end
   end
 
