@@ -13,8 +13,13 @@ class AddJoinersController < ApplicationController
     end
 
     def create
-        create_add_joiner = add_joiner_params.merge({bucketlist_id: logged_user.bucketlist.id})
-        add_joiner = AddJoiner.create(create_add_joiner)
+        destination = AddJoiner.find_by(destination_id: params[:destination_id])
+        if destination.nil? 
+            create_add_joiner = add_joiner_params.merge({bucketlist_id: logged_user.bucketlist.id})
+            add_joiner = AddJoiner.create(create_add_joiner)
+        else
+            nil
+        end
 
         render json: add_joiner
     end
