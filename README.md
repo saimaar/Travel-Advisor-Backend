@@ -3,6 +3,7 @@
 A `React and Rails` App designed as a rating traveling app that offers a large selection of destinations throughout the world.
 
 ***➡️ Link to [Demo](https://www.youtube.com/watch?v=1ZLSS1F6WBs&t=1s)***<br/>
+***➡️ Link to [Live website](https://travel-advisor-app.herokuapp.com/)***<br/>
 
 ## Technologies
 
