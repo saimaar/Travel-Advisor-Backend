@@ -2,6 +2,8 @@
 
 A `React and Rails` App designed as a rating traveling app that offers a large selection of destinations throughout the world.
 
+***➡️ Link to [Demo](https://www.youtube.com/watch?v=1ZLSS1F6WBs&t=1s)***<br/>
+
 ## Technologies
 
 ***Link to [Front End Repository](https://github.com/valentinem1/Travel_Advisor_frontend)***<br />
