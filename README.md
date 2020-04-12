@@ -2,12 +2,12 @@
 
 A `React and Rails` App designed as a rating traveling app that offers a large selection of destinations throughout the world.
 
-***➡️ Link to [Demo](https://www.youtube.com/watch?v=1ZLSS1F6WBs&t=1s)***<br/>
+***➡️ Link to [Demo](https://youtu.be/t04bmG8gYdw)***<br/>
 ***➡️ Link to [Live website](https://travel-advisor-app.herokuapp.com/)***<br/>
 
 ## Technologies
 
-***Link to [Front End Repository](https://github.com/valentinem1/Travel_Advisor_frontend)***<br />
+***Link to [Front End Repository](https://github.com/saimaar/TravelAdvisor)***<br />
 
 **Back End:**
 - Ruby [2.6.1]
@@ -51,7 +51,7 @@ To launch the app you'll have to follow the following steps:
 - Run `rails s -p 4000` to run the server
 
 **Front End setup**
-- Clone this following repo here: [Front End Repository](https://github.com/valentinem1/Travel_Advisor_frontend) and `cd` into it
+- Clone this following repo here: [Front End Repository](https://github.com/saimaar/TravelAdvisor) and `cd` into it
 - Run `npm install` to install all dependencies
 - Run `npm start` to run the server
 - Ensure it is running locally on `http://localhost:3000` to view it in the browser
