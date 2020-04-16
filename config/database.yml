@@ -21,15 +21,11 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-# development:
-#   <<: *default
-#   database: Travel_Advisor_backend_development
-
 development:
-  adapter: postgresql
-  host: localhost
-  username: Travel_Advisor_backend
+  <<: *default
   database: Travel_Advisor_backend_development
+
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
